@@ -416,6 +416,14 @@
 <span class="cmt"># 3) 웹앱으로 배포 → 접속 주소(URL)가 나옵니다</span>
 <span class="cmd">clasp</span> create-deployment --description <span class="str">"v1 공개"</span></code></pre>
         </div>
+        <div class="note info">
+          <span class="ic">🤖</span>
+          <p><b>이 부분은 신경 안 써도 돼요</b> — 웹앱으로 "진짜 작동"하려면 설정 파일(<code>appsscript.json</code>)에 웹앱 항목을 넣고 <strong>"누구나 접근 가능"</strong>으로 배포하는 등 자잘한 작업이 있는데, 이건 전부 <strong>클로드가 알아서 처리</strong>합니다. 교사는 <span class="say" data-copy="이 앱 구글 앱스스크립트 웹앱으로 배포하고 누구나 접속되게 해줘">이 앱 웹앱으로 배포하고 누구나 접속되게 해줘</span> 라고만 하면 돼요.</p>
+        </div>
+        <div class="note warn">
+          <span class="ic">🛡️</span>
+          <p><b>딱 한 번 나오는 구글 경고</b> — 처음 배포·실행할 때 구글이 <strong>"이 앱은 확인되지 않았습니다(Google hasn't verified this app)"</strong> 화면을 띄울 수 있어요. <strong>내가 만든 내 앱</strong>이니 안전합니다. <strong>고급(Advanced)</strong> → <strong>OOO(으)로 이동(Go to … unsafe)</strong> → <strong>허용(Allow)</strong>을 차례로 누르면 끝. 이건 누구 컴퓨터에서든 똑같이 한 번만 거치면 됩니다.</p>
+        </div>
         <div class="note tip">
           <span class="ic">🔗</span>
           <p><b>완성!</b> 배포가 끝나면 <strong>https://script.google.com/macros/s/.../exec</strong> 형태의 주소가 나옵니다. 이 링크를 공유하면 끝. 수정 후엔 <span class="say" data-copy="다시 배포해줘">다시 배포해줘</span> 만 하면 됩니다.</p>
