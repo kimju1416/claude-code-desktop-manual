@@ -442,9 +442,10 @@
 
         <!-- 방법 A: gh CLI -->
         <div class="method">
-          <div class="method-h">
+          <div class="method-h rec">
             <span class="badge">A</span>
-            <span class="t">명령어로 올리기 (gh CLI)<small>가장 표준적인 방법</small></span>
+            <span class="t">명령어로 올리기 (gh CLI)<small>토큰 없이 제일 쉬움</small></span>
+            <span class="star">초보자 추천</span>
           </div>
           <div class="method-b">
             <p class="body" style="margin-bottom:8px"><strong>① gh(깃허브 도구) 설치</strong> — 클로드에게 시키기:</p>
@@ -473,20 +474,24 @@
 
         <!-- 방법 B: GitHub MCP -->
         <div class="method">
-          <div class="method-h rec">
+          <div class="method-h">
             <span class="badge">B</span>
-            <span class="t">GitHub MCP로 연결하기<small>터미널 없이 클로드가 직접 다룸</small></span>
-            <span class="star">설치 더 간편</span>
+            <span class="t">GitHub MCP로 연결하기<small>토큰(PAT)이 필요해 조금 더 복잡</small></span>
           </div>
           <div class="method-b">
-            <p class="body">GitHub는 <strong>공식 MCP 서버</strong>를 운영해요. 한 번 연결해두면 저장소 만들기·이슈·코드 올리기를 <strong>클로드가 직접</strong> 합니다(명령어 타이핑 X). 아래를 클로드에게 시키거나 <span class="cc" data-copy="/mcp">/mcp</span> 메뉴에서 추가하세요.</p>
+            <div class="note warn" style="margin-top:0">
+              <span class="ic">🔎</span>
+              <p><b>"GitHub MCP가 안 보이던데?"</b> — 맞아요. GitHub MCP는 <strong>커넥터 목록(갤러리)에 없어서 검색으로는 안 나와요.</strong> 아래처럼 <strong>개인 토큰(PAT)과 함께 명령어로 직접 추가</strong>해야 합니다. 그리고 <strong>OAuth(브라우저 로그인)는 아직 지원 안 해서, 토큰이 꼭 필요해요.</strong> 그냥 코드 올리기만 할 거면 <strong>방법 A(gh CLI)가 훨씬 간단</strong>합니다.</p>
+            </div>
+            <p class="body" style="margin-bottom:6px"><strong>① 토큰(PAT) 발급</strong> — <a class="link" href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a> → <strong>Generate new token (classic)</strong> → 이름 입력 · 만료기간 선택 · <strong>repo</strong> 항목 체크 → <strong>Generate</strong> → 나온 토큰 복사 (이 화면에서만 보여요!)</p>
+            <p class="body" style="margin:14px 0 6px"><strong>② 연결</strong> — 아래에서 <code>여기에_내토큰</code> 자리에 ①의 토큰을 붙여넣어 실행:</p>
             <div class="code">
-              <div class="code-top"><span class="label"><span class="dots"><i></i><i></i><i></i></span>GitHub MCP 연결 (공식 원격 서버)</span><button class="copy">복사</button></div>
-              <pre><code><span class="cmd">claude</span> mcp add --transport http github https://api.githubcopilot.com/mcp/</code></pre>
+              <div class="code-top"><span class="label"><span class="dots"><i></i><i></i><i></i></span>GitHub MCP 연결 (토큰 필요)</span><button class="copy">복사</button></div>
+              <pre><code><span class="cmd">claude</span> mcp add-json github <span class="str">'{"type":"http","url":"https://api.githubcopilot.com/mcp","headers":{"Authorization":"Bearer 여기에_내토큰"}}'</span></code></pre>
             </div>
             <div class="note mcp">
-              <span class="ic">🔐</span>
-              <p>연결 뒤 <span class="cc" data-copy="/mcp">/mcp</span> 를 입력하고 <strong>github → Authenticate</strong>를 누르면 브라우저로 깃허브 로그인 창이 떠요. 한 번 허용하면 끝입니다. 그다음부터는 <span class="say" data-copy="깃허브에 my-school-app 저장소 새로 만들고 이 파일들 올려줘">깃허브에 my-school-app 저장소 새로 만들고 이 파일들 올려줘</span> 처럼 말로 시키면 됩니다.</p>
+              <span class="ic">✅</span>
+              <p>연결 확인은 <span class="cc" data-copy="/mcp">/mcp</span> 또는 <span class="cc" data-copy="claude mcp list">claude mcp list</span>. 잘 붙으면 그다음부터는 <span class="say" data-copy="깃허브에 my-school-app 저장소 새로 만들고 이 파일들 올려줘">깃허브에 my-school-app 저장소 새로 만들고 이 파일들 올려줘</span> 처럼 말로 시키면 됩니다.</p>
             </div>
             <p class="body" style="margin-bottom:0">공식 문서: <a class="link" href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">github.com/github/github-mcp-server</a></p>
           </div>
