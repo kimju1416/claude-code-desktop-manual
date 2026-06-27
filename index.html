@@ -572,7 +572,7 @@
           <div class="method-b">
             <div class="note warn" style="margin-top:0">
               <span class="ic">🔎</span>
-              <p><b>"GitHub MCP가 안 보이던데?"</b> — 맞아요. GitHub MCP는 <strong>커넥터 목록(갤러리)에 없어서 검색으로는 안 나와요.</strong> 아래처럼 <strong>개인 토큰(PAT)과 함께 명령어로 직접 추가</strong>해야 합니다. 그리고 <strong>OAuth(브라우저 로그인)는 아직 지원 안 해서, 토큰이 꼭 필요해요.</strong> 그냥 코드 올리기만 할 거면 <strong>방법 A(gh CLI)가 훨씬 간단</strong>합니다.</p>
+              <p><b>"GitHub MCP가 안 보이던데?"</b> — 맞아요. GitHub MCP는 <strong>커넥터 목록(갤러리)에 없어서 검색으로는 안 나와요.</strong> 아래처럼 <strong>개인 토큰(PAT)과 함께 명령어로 직접 추가</strong>하는 게 가장 확실합니다. (브라우저 로그인 방식도 있지만 프로그램마다 달라서, <strong>클로드 코드에선 토큰 방식이 제일 잘 됩니다.</strong>) 그냥 코드 올리기만 할 거면 <strong>방법 A(gh CLI)가 훨씬 간단</strong>하니 그걸 추천해요.</p>
             </div>
             <p class="body" style="margin-bottom:6px"><strong>① 토큰(PAT) 발급</strong> — <a class="link" href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a> → <strong>Generate new token (classic)</strong> → 이름 입력 · 만료기간 선택 · <strong>repo</strong> 항목 체크 → <strong>Generate</strong> → 나온 토큰 복사 (이 화면에서만 보여요!)</p>
             <p class="body" style="margin:14px 0 6px"><strong>② 연결</strong> — 아래에서 <code>여기에_내토큰</code> 자리에 ①의 토큰을 붙여넣어 실행:</p>
