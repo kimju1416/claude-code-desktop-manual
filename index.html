@@ -200,6 +200,12 @@
   footer{border-top:1px solid var(--line);padding:34px 40px;text-align:center;color:var(--ink-soft);font-size:13px}
   footer b{color:var(--clay-dark)}
   footer a{color:var(--blue);border-bottom:1px solid rgba(47,111,176,.4)}
+  .insta{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 16px;
+    border:1px solid var(--line);border-radius:999px;background:#fff;text-decoration:none;
+    color:var(--ink);font-size:13px;font-weight:600;transition:.15s;border-bottom:1px solid var(--line)}
+  .insta:hover{background:var(--clay-soft);border-color:var(--clay);color:var(--clay-dark)}
+  .insta svg{width:18px;height:18px;flex:none}
+  .insta .at{color:var(--ink-soft);font-weight:500}
 
   /* progress + toast */
   #prog{position:fixed;top:0;left:0;height:3px;background:var(--clay);width:0;z-index:99;transition:width .1s}
@@ -718,6 +724,14 @@
     <footer>
       <p><b>클로드 코드 데스크탑 시작 메뉴얼</b> · 비전공 교사용 · Windows 11 기준</p>
       <p style="margin-top:6px;font-size:12px;opacity:.85">참고 — <a href="https://code.claude.com/docs" target="_blank" rel="noopener">Claude Code 공식 문서</a> · <a href="https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/" target="_blank" rel="noopener">Netlify MCP</a> · <a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">GitHub MCP</a></p>
+      <a class="insta" href="https://www.instagram.com/kimju.zip" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#C45D3A" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4.2" stroke="#C45D3A" stroke-width="1.8"/>
+          <circle cx="17.4" cy="6.6" r="1.2" fill="#C45D3A"/>
+        </svg>
+        <span class="at">@</span>kimju.zip
+      </a>
     </footer>
 
   </main>
