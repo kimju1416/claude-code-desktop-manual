@@ -313,7 +313,12 @@
 
         <div class="note info">
           <span class="ic">🆕</span>
-          <p><b>2026년 7월 코워크 대규모 업데이트</b> — 이제 <strong>웹(claude.ai)과 모바일 앱</strong>에서도 코워크를 쓸 수 있어요(베타, Max 플랜부터 순차 확대). <strong>원격 세션</strong> 덕분에 작업이 내 계정(클라우드)에서 돌아가서 <strong>노트북을 닫아도 계속 진행</strong>되고, 다른 기기에서 이어서 할 수 있습니다. <strong>예약 작업</strong>은 기기가 꺼져 있어도 알아서 실행돼요. 챗과 코워크가 <strong>한 화면으로 통합</strong>되어 프로젝트·아티팩트도 한 곳에서 관리됩니다. 코워크 자체는 유료 플랜(Pro·Max·Team·Enterprise)에서 이용 가능해요.</p>
+          <p><b>2026년 7월 코워크 대규모 업데이트</b> — <strong>7월 7일부터</strong> 웹(claude.ai)과 모바일 앱(아이폰·아이패드·안드로이드)에서도 코워크를 쓸 수 있어요(베타, Max 플랜부터 순차 확대). <strong>원격 세션</strong> 덕분에 작업이 내 계정(클라우드)에서 돌아가서 <strong>노트북을 닫아도 계속 진행</strong>되고, 다른 기기에서 이어서 할 수 있습니다. <strong>예약 작업</strong>은 기기가 꺼져 있어도 알아서 실행돼요. 챗과 코워크가 <strong>하나의 홈 탭</strong>(사이드바·검색·Projects·Artifacts까지 통합)으로 합쳐졌고, 늘어난 <strong>사용량 2배 한도</strong>는 8월 5일까지 이어집니다. 코워크 자체는 유료 플랜(Pro·Max·Team·Enterprise)에서 이용 가능해요.</p>
+        </div>
+
+        <div class="note mcp">
+          <span class="ic">📲</span>
+          <p><b>Dispatch — 폰에서 지시, 데스크탑에서 실행</b> — 이동 중에 폰으로 짧게 프롬프트만 입력하면, 집·학교 PC에 켜둔 <strong>클로드 코드(또는 코워크) 세션이 그대로 실행</strong>됩니다. 다음에 데스크탑 앞에 앉으면 결과가 이미 준비돼 있어요. macOS는 2026년 3월, Windows는 4월부터 지원되는 기능입니다(Pro·Max 리서치 프리뷰). <strong>"쉬는 시간에 폰으로 지시 → 다음 시간에 컴퓨터로 확인"</strong> 흐름에 딱 맞아요.</p>
         </div>
 
         <p class="body" style="margin-top:26px">하지만 셋은 칼로 자르듯 나뉘지 않아요. <strong>서로 크게 겹치는 "교집합"</strong>이 있습니다. 같은 일을 셋 다 할 수 있지만, <strong>누가 더 잘·편하게 하느냐</strong>가 다를 뿐이에요.</p>
@@ -452,7 +457,7 @@
 
         <h3><span class="e">⏎</span>알아두면 편한 기본 동작</h3>
         <ul class="body">
-          <li><strong>승인 요청</strong> — 파일을 바꾸거나 명령을 실행하기 전에 "해도 될까요?"라고 물어요. <kbd>Yes</kbd>를 누르면 진행됩니다. (자주 쓰는 건 "항상 허용")</li>
+          <li><strong>승인 요청</strong> — 파일을 바꾸거나 명령을 실행하기 전에 "해도 될까요?"라고 물어요. <kbd>Yes</kbd>를 누르면 진행됩니다. (자주 쓰는 건 "항상 허용") 최근엔 <strong>오토 모드(Auto mode, 리서치 프리뷰)</strong>도 생겨서, 안전한 작업은 자동 승인하고 <strong>위험할 수 있는 작업만 골라 물어봐요</strong>.</li>
           <li><strong>중간에 멈추기</strong> — 방향이 틀어졌다 싶으면 <kbd>Esc</kbd> 키로 즉시 멈추고 다시 지시할 수 있어요.</li>
           <li><strong>결과 미리보기</strong> — 만든 HTML 파일은 다운로드 폴더에서 <strong>더블클릭</strong>하면 바로 브라우저로 열려요.</li>
         </ul>
@@ -466,8 +471,26 @@
             <tr><th><span class="cc" data-copy="/code-review">/code-review</span></th><td>만든 코드에 문제 없는지 점검받고 싶을 때</td></tr>
             <tr><th><span class="cc" data-copy="/mcp">/mcp</span></th><td>외부 도구(Netlify·GitHub 등) 연결·로그인 관리 — 6번에서 사용</td></tr>
             <tr><th><span class="cc" data-copy="/doctor">/doctor</span></th><td>뭔가 이상하게 안 될 때 — 설정을 스스로 진단하고 <b>고치는 것까지</b> 해줘요</td></tr>
+            <tr><th><span class="cc" data-copy="/model">/model</span></th><td>지금 쓰는 모델을 바꾸고 싶을 때 (아래 표 참고)</td></tr>
+            <tr><th><span class="cc" data-copy="/fast">/fast</span></th><td>Opus 모델일 때 응답 <b>속도만 더 올리고</b> 싶을 때 (Opus 4.7·4.8 한정)</td></tr>
           </tbody>
         </table>
+
+        <h3><span class="e">🧠</span>어떤 모델을 쓸까?</h3>
+        <p class="body">클로드 코드 안에는 여러 모델이 있고, <span class="cc" data-copy="/model">/model</span> 로 바꿀 수 있어요. 처음엔 <strong>그냥 기본값</strong>으로 시작하면 충분합니다.</p>
+        <table class="compare">
+          <thead><tr><th>모델</th><th>특징</th><th>이럴 때</th></tr></thead>
+          <tbody>
+            <tr><th>Haiku 4.5</th><td>가장 가볍고 빠름</td><td>간단한 질문·짧은 수정</td></tr>
+            <tr><th>Sonnet 5<br><span style="font-weight:400;font-size:11px">(신규 기본모델)</span></th><td>Opus에 근접한 실력을 더 저렴하게</td><td class="win"><b>학교 웹앱 제작 — 기본 추천</b></td></tr>
+            <tr><th>Opus 4.8</th><td>가장 똑똑함 · <span class="cc" data-copy="/fast">/fast</span>로 속도↑ 전환 가능</td><td>복잡한 앱·까다로운 버그</td></tr>
+            <tr><th>Fable 5</th><td>대중 공개 최상위 모델 (claude.ai 챗)</td><td>가장 어려운 리서치·창작</td></tr>
+          </tbody>
+        </table>
+        <div class="note tip">
+          <span class="ic">💰</span>
+          <p>새 기본모델 <strong>Sonnet 5</strong>는 <strong>2026년 8월 31일까지 도입 프로모션 가격</strong>으로 제공돼요. 지금이 써보기 좋은 타이밍입니다. (구독 요금제로 쓰는 경우 요금 변동은 없어요 — API 종량 결제 기준 안내입니다)</p>
+        </div>
 
         <div class="note mcp">
           <span class="ic">💬</span>
@@ -724,6 +747,8 @@
           <div class="tipcard"><span class="te">🗣️</span><h4>완벽한 지시는 NO</h4><p>처음부터 길게 안 써도 돼요. 일단 시키고 결과 보며 <strong>대화로 다듬는 게</strong> 빠릅니다.</p></div>
           <div class="tipcard"><span class="te">🌐</span><h4>내장 브라우저로 확인</h4><p>데스크탑 앱에 브라우저가 내장돼, 만든 페이지를 <strong>클로드가 직접 열어 보고 클릭하며 확인</strong>해줘요. "직접 열어서 확인해줘"라고만 하면 됩니다.</p></div>
           <div class="tipcard"><span class="te">📱</span><h4>자리 비울 땐 코워크</h4><p>오래 걸리는 문서·잡무는 <strong>코워크 원격 세션</strong>에 맡기면 노트북을 닫아도 계속 돌아가요. 폰에서 확인도 가능(1번 참고).</p></div>
+          <div class="tipcard"><span class="te">🚀</span><h4>폰으로 지시, PC에서 확인 (Dispatch)</h4><p>이동 중 폰 앱에 짧게 프롬프트만 남기면 <strong>PC의 클로드 코드 세션이 알아서 실행</strong>돼요. 다음에 자리에 앉으면 결과가 기다리고 있어요(1번 참고).</p></div>
+          <div class="tipcard"><span class="te">🧑‍🤝‍🧑</span><h4>서브에이전트로 나눠 맡기기</h4><p>복잡한 앱은 클로드가 <strong>기획·디자인·개발·검수</strong> 역할을 스스로 나눠 순서대로 진행해요. <span class="say" data-copy="이 앱 처음부터 끝까지 알아서 기획하고 만들어줘">"처음부터 끝까지 알아서 기획하고 만들어줘"</span>라고만 해도 됩니다.</p></div>
         </div>
 
         <div class="note tip" style="margin-top:22px">
@@ -735,7 +760,7 @@
     </div><!-- /inner -->
 
     <footer>
-      <p><b>클로드 코드 데스크탑 시작 메뉴얼</b> · 비전공 교사용 · Windows 11 기준 · 2026년 7월 업데이트 반영</p>
+      <p><b>클로드 코드 데스크탑 시작 메뉴얼</b> · 비전공 교사용 · Windows 11 기준 · 2026년 7월 업데이트 반영 (7/23 갱신)</p>
       <p style="margin-top:6px;font-size:12px;opacity:.85">참고 — <a href="https://code.claude.com/docs" target="_blank" rel="noopener">Claude Code 공식 문서</a> · <a href="https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/" target="_blank" rel="noopener">Netlify MCP</a> · <a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">GitHub MCP</a></p>
       <a class="insta" href="https://www.instagram.com/kimju.zip" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
